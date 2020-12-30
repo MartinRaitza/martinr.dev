@@ -1,0 +1,17 @@
+@mixin font-family($type: "body") {
+  $font: map-get(
+    $map: $defaultFonts,
+    $key: $type,
+  );
+
+  @if ($font) {
+    font-family: map-get($font, "family"), sans-serif;
+    font-weight: map-get($font, "weight");
+  } @else {
+    @debug "Invalid font type provided";
+  }
+}
+
+@mixin font-weight($weight) {
+  font-weight: map-get($font-weight, $weight);
+}

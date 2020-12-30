@@ -1,0 +1,76 @@
+$font-path: "../fonts/";
+
+$font-weight: (
+  regular: 400,
+  medium: 500,
+  bold: 700,
+);
+
+$defaultFonts: (
+  "headline": (
+    "family": "Nurom-Regular",
+    "weight": 400,
+  ),
+  "subline": (
+    "family": "Roboto-Medium",
+    "weight": 500,
+  ),
+  "body": (
+    "family": "Roboto-Regular",
+    "weight": 400,
+  ),
+);
+
+$fonts: (
+  "Nurom": (
+    "regular": (
+      "family": "Nurom-Regular",
+      "style": "normal",
+      "localSrc": "Nurom-Regular",
+      "fileName": "Nurom-Regular",
+      "weight": 400,
+    ),
+  ),
+  "Roboto": (
+    "regular": (
+      "family": "Roboto-Regular",
+      "style": "normal",
+      "localSrc": "Roboto-Regular",
+      "fileName": "Roboto-Regular",
+      "weight": 400,
+    ),
+    "medium": (
+      "family": "Roboto-Medium",
+      "style": "normal",
+      "localSrc": "Roboto-Medium",
+      "fileName": "Roboto-Medium",
+      "weight": 500,
+    ),
+  ),
+);
+
+@each $fontName, $fontStyles in $fonts {
+  @each $fontStyle, $fontStyleSettings in $fontStyles {
+    @font-face {
+      $fileName: map-get(
+        $map: $fontStyleSettings,
+        $key: "fileName",
+      );
+
+      $weight: map-get(
+        $map: $fontStyleSettings,
+        $key: weight,
+      );
+
+      font-family: map-get($map: $fontStyleSettings, $key: family);
+      font-style: map-get($map: $fontStyleSettings, $key: style);
+
+      font-weight: $weight;
+
+      src: local(map-get($map: $fontStyleSettings, $key: localSrc)),
+        url("#{$font-path}#{$fileName}.woff2") format("woff2"),
+        url("#{$font-path}#{$fileName}.ttf") format("truetype"),
+        url("#{$font-path}#{$fileName}.svg##{$fontName}") format("svg");
+    }
+  }
+}
