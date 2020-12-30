@@ -1,0 +1,12 @@
+{
+  "name": "martinr.dev",
+  "version": "0.0.1",
+  "repository": "git@github.com:MartinRaitza/martinr.dev.git",
+  "author": "MartinRaitza <info@martinraitza.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "ress": "^3.0.0",
+    "sass-mq": "^5.0.1",
+    "susy": "^3.0.6"
+  }
+}
