@@ -1,19 +1,113 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'de-DE' }}">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <script
+      type="text/javascript"
+      src="{{ '/assets/js/ready.js' | relative_url }}"
+    ></script>
   </head>
-  <body>   
+  <body>
     <main class="o-scroll">
-      {{ content }}
+      {% include header.html %} {{ content }}
 
       <div class="o-layout">
-        <div class="o-layout__col o-layout__col--4/12">TEST 1/3</div>
-        <div class="o-layout__col o-layout__col--4/12">TEST 1/3</div>
-        <div class="o-layout__col o-layout__col--4/12">TEST 1/3</div>
+        <div class="o-layout__col o-layout__col--6/12">
+          <h1>Hi, this ist my site</h1>
+        </div>
+        <div class="o-layout__col o-layout__col--6/12">
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          amet, consetetur sadipscing.
+        </div>
+      </div>
+
+      <div class="o-layout">
+        <div class="o-layout__col o-layout__col--6/12">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam.
+        </div>
+        <div class="o-layout__col o-layout__col--6/12">
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          amet, consetetur sadipscing.
+        </div>
+      </div>
+      <div class="o-layout">
+        <div class="o-layout__col o-layout__col--4/12">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam.
+        </div>
+        <div class="o-layout__col o-layout__col--4/12">
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          amet, consetetur sadipscing.
+        </div>
+        <div class="o-layout__col o-layout__col--4/12">
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+          aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.
+        </div>
+      </div>
+      <div class="o-layout">
+        <div class="o-layout__col o-layout__col--6/12">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam.
+        </div>
+        <div class="o-layout__col o-layout__col--6/12">
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          amet, consetetur sadipscing.
+        </div>
+      </div>
+      <div class="o-layout">
+        <div class="o-layout__col o-layout__col--4/12">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam.
+        </div>
+        <div class="o-layout__col o-layout__col--4/12">
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          amet, consetetur sadipscing.
+        </div>
+        <div class="o-layout__col o-layout__col--4/12">
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+          aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.
+        </div>
+      </div>
+      <div class="o-layout">
+        <div class="o-layout__col o-layout__col--6/12">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam.
+        </div>
+        <div class="o-layout__col o-layout__col--6/12">
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          amet, consetetur sadipscing.
+        </div>
+      </div>
+      <div class="o-layout">
+        <div class="o-layout__col o-layout__col--4/12">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam.
+        </div>
+        <div class="o-layout__col o-layout__col--4/12">
+          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+          amet, consetetur sadipscing.
+        </div>
+        <div class="o-layout__col o-layout__col--4/12">
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+          aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.
+        </div>
       </div>
 
       {% include footer.html %}
