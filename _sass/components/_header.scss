@@ -5,6 +5,17 @@
     @include transition(transform, 1s, 1s);
   }
 
+  .o-layout__col {
+    @include susy-use($susy) {
+      width: span(6 of 12 narrow);
+      margin-right: gutter();
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &__title,
   &__cta {
     opacity: 0;
