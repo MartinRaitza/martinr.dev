@@ -1,0 +1,60 @@
+.c-line {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    @include transition(transform, 1s, 0.3s);
+  }
+
+  &--top {
+    &::before {
+      transform-origin: center left;
+      border-top: px-to-rem(1px) solid $color--border;
+      transform: scaleX(0);
+    }
+  }
+
+  &--right {
+    &::before {
+      transform-origin: center bottom;
+      border-right: px-to-rem(1px) solid $color--border;
+      transform: scaleY(0);
+    }
+  }
+
+  &--bottom {
+    &::before {
+      transform-origin: center left;
+      border-bottom: px-to-rem(1px) solid $color--border;
+      transform: scaleX(0);
+    }
+  }
+
+  &--left {
+    &::before {
+      transform-origin: center bottom;
+      border-left: px-to-rem(1px) solid $color--border;
+      transform: scaleY(0);
+    }
+  }
+}
+
+.has-dom-ready .c-line {
+  &--top,
+  &--bottom {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &--right,
+  &--left {
+    &::before {
+      transform: scaleY(1);
+    }
+  }
+}
