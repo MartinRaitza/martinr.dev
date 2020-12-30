@@ -1,0 +1,55 @@
+@mixin transition(
+  $property: "default",
+  $duration: "default",
+  $delay: "default"
+) {
+  @if (map-has-key(map-get($map: $transition, $key: "property"), $property)) {
+    $property: map-get(
+      $map:
+        map-get(
+          $map: $transition,
+          $key: "property",
+        ),
+      $key: $property,
+    );
+  } @else {
+    @error '`#{$property}` transition: property not allowed.';
+  }
+
+  @if (map-has-key(map-get($map: $transition, $key: "duration"), $duration)) {
+    $duration: map-get(
+      $map:
+        map-get(
+          $map: $transition,
+          $key: "duration",
+        ),
+      $key: $duration,
+    );
+  } @else {
+    @error '`#{$duration}` transition: duration not allowed.';
+  }
+
+  $curve: map-get(
+    $map:
+      map-get(
+        $map: $transition,
+        $key: "curve",
+      ),
+    $key: default,
+  );
+
+  @if (map-has-key(map-get($map: $transition, $key: "delay"), $delay)) {
+    $delay: map-get(
+      $map:
+        map-get(
+          $map: $transition,
+          $key: "delay",
+        ),
+      $key: $delay,
+    );
+  } @else {
+    @error '`#{$delay}` transition: delay not allowed.';
+  }
+
+  transition: $property $duration $curve $delay;
+}

@@ -1,0 +1,22 @@
+$transition: (
+  property: (
+    default: all,
+    transform: transform,
+    opacity: opacity,
+  ),
+  duration: (
+    default: 0s,
+    1s: 1s,
+  ),
+  delay: (
+    default: 0s,
+    0.3s: 0.3s,
+    0.5s: 0.5s,
+    0.6s: 0.6s,
+    0.7s: 0.7s,
+    1s: 1s,
+  ),
+  curve: (
+    default: cubic-bezier(0.215, 0.61, 0.355, 1),
+  ),
+);

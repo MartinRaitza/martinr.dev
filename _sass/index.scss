@@ -7,6 +7,7 @@
 @import "tokens/font-family";
 @import "tokens/spacing";
 @import "tokens/susy";
+@import "tokens/transition";
 
 // utilities
 @import "utilities/spacing";
@@ -14,6 +15,7 @@
 // tools
 @import "tools/font";
 @import "tools/spacing";
+@import "tools/transition";
 
 // objects
 @import "objects/scroll";
