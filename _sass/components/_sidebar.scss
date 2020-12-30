@@ -1,0 +1,47 @@
+.c-sidebar {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: px-to-rem(100px);
+  position: fixed;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mq($from: m) {
+    display: flex;
+  }
+
+  &__tagline {
+    position: relative;
+    white-space: nowrap;
+    background: $color--brand--primary;
+    width: px-to-rem(200px);
+    height: px-to-rem(100px);
+    padding: px-to-rem(16px);
+    transform: rotate(-90deg) translateY(0) translateX(-210px);
+
+    @include transition(transform, 1s, 0.5s);
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: px-to-rem(100px) px-to-rem(60px) 0 0;
+      border-color: $color--brand--primary transparent transparent transparent;
+      position: absolute;
+      top: 0;
+      right: px-to-rem(-60px);
+      z-index: -1;
+    }
+  }
+}
+
+.has-dom-ready .c-sidebar {
+  &__tagline {
+    transform: rotate(-90deg) translateY(0) translateX(50px);
+  }
+}
