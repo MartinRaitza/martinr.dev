@@ -63,7 +63,7 @@ PLATFORMS
   universal-darwin-19
 
 DEPENDENCIES
-  jekyll-sitemap
+  jekyll-sitemap (~> 1.4.0)
 
 BUNDLED WITH
    2.2.3
