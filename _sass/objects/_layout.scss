@@ -28,6 +28,8 @@
     margin-right: gutter();
     float: left;
 
+    @include padding-y(m);
+
     @include mq($from: s) {
       @include susy-use($susy-s) {
         width: span(12 of 12 narrow);

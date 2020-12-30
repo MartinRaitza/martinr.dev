@@ -1,0 +1,11 @@
+@mixin spacers($property, $mobile, $tablet, $desktop) {
+  #{$property}: $mobile;
+
+  @include mq($from: m) {
+    #{$property}: $tablet;
+  }
+
+  @include mq($from: l) {
+    #{$property}: $desktop;
+  }
+}

@@ -1,0 +1,17 @@
+@mixin spacing($property, $value) {
+  @include spacers(
+    $property,
+    map-get(map-get($spacing, $value), mobile),
+    map-get(map-get($spacing, $value), tablet),
+    map-get(map-get($spacing, $value), desktop)
+  );
+}
+
+@mixin padding-y($value) {
+  @include spacing(padding-top, $value);
+  @include spacing(padding-bottom, $value);
+}
+
+@mixin margin-right($value) {
+  @include spacing(margin-right, $value);
+}
