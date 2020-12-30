@@ -1,0 +1,42 @@
+.c-header {
+  position: relative;
+
+  &.c-line--bottom::before {
+    @include transition(transform, 1s, 1s);
+  }
+
+  &__title,
+  &__cta {
+    opacity: 0;
+  }
+
+  &__title {
+    @include font-family("headline");
+
+    font-size: px-to-rem(20px);
+    text-transform: uppercase;
+
+    @include mq($from: m) {
+      font-size: px-to-rem(32px);
+    }
+  }
+
+  &__cta {
+    float: right;
+  }
+}
+
+.has-dom-ready .c-header {
+  &__title,
+  &__cta {
+    opacity: 1;
+  }
+
+  &__title {
+    @include transition(opacity, 1s, 0.6s);
+  }
+
+  &__cta {
+    @include transition(opacity, 1s, 0.7s);
+  }
+}
