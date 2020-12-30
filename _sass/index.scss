@@ -18,13 +18,14 @@
 @import "tools/spacing";
 @import "tools/transition";
 
-// objects
-@import "objects/scroll";
-@import "objects/layout";
-
 // elements
 @import "elements/body";
 @import "elements/typography";
+@import "elements/heading";
+
+// objects
+@import "objects/scroll";
+@import "objects/layout";
 
 // components
 @import "components/footer";

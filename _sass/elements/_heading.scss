@@ -1,0 +1,86 @@
+h1,
+h2,
+h3,
+h4 {
+  @include font-family("headline");
+  text-transform: uppercase;
+}
+
+h1,
+.e-h1 {
+  font-size: px-to-rem(56px);
+  line-height: px-to-rem(60px);
+}
+
+h2,
+.e-h2 {
+  font-size: px-to-rem(36px);
+  line-height: px-to-rem(40px);
+}
+
+h3,
+.e-h3 {
+  font-size: px-to-rem(24px);
+  line-height: px-to-rem(28px);
+}
+
+h4,
+.e-h4 {
+  font-size: px-to-rem(20px);
+  line-height: px-to-rem(24px);
+  @include font-family("subline");
+}
+
+@include mq($from: s) {
+  h1,
+  .e-h1 {
+    font-size: px-to-rem(62px);
+    line-height: px-to-rem(66px);
+  }
+
+  h2,
+  .e-h2 {
+    font-size: px-to-rem(40px);
+    line-height: px-to-rem(44px);
+  }
+
+  h3,
+  .e-h3 {
+    font-size: px-to-rem(26px);
+    line-height: px-to-rem(30px);
+  }
+
+  h4,
+  .e-h4 {
+    font-size: px-to-rem(22px);
+    line-height: px-to-rem(26px);
+    @include font-family("subline");
+  }
+}
+
+@include mq($from: s) {
+  h1,
+  .e-h1 {
+    font-size: px-to-rem(66px);
+    line-height: px-to-rem(70px);
+  }
+
+  h2,
+  .e-h2 {
+    font-size: px-to-rem(44px);
+    line-height: px-to-rem(48px);
+  }
+
+  h3,
+  .e-h3 {
+    font-size: px-to-rem(28px);
+    line-height: px-to-rem(32px);
+  }
+
+  h4,
+  .e-h4 {
+    font-size: px-to-rem(24px);
+    line-height: px-to-rem(28px);
+    @include font-family("subline");
+  }
+}
