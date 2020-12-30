@@ -1,0 +1,11 @@
+@function px-to-rem($value) {
+  @if (type-of($value) == number) {
+    @if (unit($value) != "px") {
+      @error '`#{$value}` px-to-rem: only pixel value allowed.';
+    }
+  } @else {
+    @error '`#{$value}` px-to-rem: only pixel value allowed.';
+  }
+
+  @return $value / 16px * 1rem;
+}
