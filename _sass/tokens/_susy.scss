@@ -1,0 +1,33 @@
+@import "../../node_modules/susy/sass/susy";
+
+// Global Susy config
+$susy: (
+  columns: susy-repeat(12),
+  gutters: 16px,
+  container-spread: narrow,
+  container: auto,
+);
+
+$susy-s: (
+  gutters: 20px,
+);
+
+$susy-m: (
+  gutters: 28px,
+);
+
+$susy-l: (
+  gutters: 32px,
+);
+
+// ppply breakpoint specific settings SEE: https://github.com/oddbird/susy/issues/658
+@mixin susy-use($settings) {
+  $settings: susy-compile($settings);
+
+  $global: $susy;
+  $susy: map-merge($susy, $settings) !global;
+
+  @content;
+
+  $susy: $global !global;
+}

@@ -1,0 +1,87 @@
+.o-layout {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 gutter();
+
+  @include mq($from: s) {
+    @include susy-use($susy-s) {
+      padding: 0 gutter();
+    }
+  }
+
+  @include mq($from: m) {
+    @include susy-use($susy-m) {
+      padding: 0 gutter();
+    }
+  }
+
+  @include mq($from: l) {
+    @include susy-use($susy-l) {
+      padding: 0 gutter();
+    }
+  }
+
+  &__col {
+    box-sizing: border-box;
+    position: relative;
+    width: span(12);
+    margin-right: gutter();
+    float: left;
+
+    @include mq($from: s) {
+      @include susy-use($susy-s) {
+        width: span(12 of 12 narrow);
+        margin-right: gutter();
+      }
+    }
+
+    @include mq($from: m) {
+      @include susy-use($susy-m) {
+        width: span(12 of 12 narrow);
+        margin-right: gutter();
+      }
+    }
+
+    @include mq($from: l) {
+      @include susy-use($susy-l) {
+        width: span(12 of 12 narrow);
+        margin-right: gutter();
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @for $i from 1 through 12 {
+      &--#{$i}\/12 {
+        @include mq($from: s) {
+          @include susy-use($susy-s) {
+            width: span($i of 12 narrow);
+            margin-right: gutter();
+          }
+        }
+
+        @include mq($from: m) {
+          @include susy-use($susy-m) {
+            width: span($i of 12 narrow);
+            margin-right: gutter();
+          }
+        }
+
+        @include mq($from: l) {
+          @include susy-use($susy-l) {
+            width: span($i of 12 narrow);
+            margin-right: gutter();
+          }
+        }
+
+        @if $i == 6 {
+          &:nth-child(2n + 0) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
