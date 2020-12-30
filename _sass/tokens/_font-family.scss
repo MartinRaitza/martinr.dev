@@ -1,6 +1,7 @@
 $font-path: "../fonts/";
 
 $font-weight: (
+  light: 300,
   regular: 400,
   medium: 500,
   bold: 700,
@@ -9,15 +10,12 @@ $font-weight: (
 $defaultFonts: (
   "headline": (
     "family": "Nurom-Regular",
-    "weight": 400,
   ),
   "subline": (
-    "family": "Roboto-Medium",
-    "weight": 500,
+    "family": "Barlow-Medium",
   ),
   "body": (
-    "family": "Roboto-Regular",
-    "weight": 400,
+    "family": "Barlow-Regular",
   ),
 );
 
@@ -28,23 +26,20 @@ $fonts: (
       "style": "normal",
       "localSrc": "Nurom-Regular",
       "fileName": "Nurom-Regular",
-      "weight": 400,
     ),
   ),
-  "Roboto": (
-    "regular": (
-      "family": "Roboto-Regular",
+  "Barlow": (
+    "light": (
+      "family": "Barlow-Light",
       "style": "normal",
-      "localSrc": "Roboto-Regular",
-      "fileName": "Roboto-Regular",
-      "weight": 400,
+      "localSrc": "Barlow-Light",
+      "fileName": "Barlow-Light",
     ),
     "medium": (
-      "family": "Roboto-Medium",
+      "family": "Barlow-Medium",
       "style": "normal",
-      "localSrc": "Roboto-Medium",
-      "fileName": "Roboto-Medium",
-      "weight": 500,
+      "localSrc": "Barlow-Medium",
+      "fileName": "Barlow-Medium",
     ),
   ),
 );
