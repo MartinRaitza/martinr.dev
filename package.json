@@ -5,8 +5,14 @@
   "author": "MartinRaitza <info@martinraitza.de>",
   "license": "MIT",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-svg-sprite": "^1.5.0",
     "ress": "^3.0.0",
     "sass-mq": "^5.0.1",
     "susy": "^3.0.6"
+  },
+  "scripts": {
+    "spritemap": "gulp sprite"
   }
 }

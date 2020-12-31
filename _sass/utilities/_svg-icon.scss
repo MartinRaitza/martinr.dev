@@ -1,0 +1,10 @@
+.u-svg-icon {
+  width: px-to-rem(24px);
+  height: px-to-rem(24px);
+  color: $color--brand--primary;
+
+  @include mq($from: s) {
+    width: px-to-rem(32px);
+    height: px-to-rem(32px);
+  }
+}
