@@ -5,6 +5,10 @@
   background: $color--white;
   color: $color--text;
 
+  @include mq($until: s) {
+    padding-top: px-to-rem(56px);
+  }
+
   @include mq($from: m) {
     padding-left: px-to-rem(100px);
   }

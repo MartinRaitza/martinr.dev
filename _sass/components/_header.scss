@@ -1,44 +1,118 @@
 .c-header {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mq($until: s) {
+    background: $color--white;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
 
   &.c-line--bottom::before {
     @include transition(transform, 1s, 1s);
   }
 
-  .o-layout__col {
-    @include susy-use($susy) {
-      width: span(6 of 12 narrow);
-      margin-right: gutter();
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
   &__title,
-  &__cta {
+  &__cta__text {
     opacity: 0;
   }
 
   &__title {
     @include font-family("headline");
 
-    font-size: px-to-rem(20px);
+    font-size: px-to-rem(24px);
 
     @include mq($from: m) {
-      font-size: px-to-rem(32px);
+      font-size: px-to-rem(28px);
+    }
+  }
+
+  &__cta__text {
+    padding: px-to-rem(16px) px-to-rem(112px) px-to-rem(16px) px-to-rem(16px);
+
+    @include mq($from: s) {
+      padding: px-to-rem(32px) px-to-rem(112px) px-to-rem(32px) px-to-rem(16px);
     }
   }
 
   &__cta {
-    float: right;
+    position: fixed;
+    height: px-to-rem(56px);
+    width: px-to-rem(56px);
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    transform: translateX(160px);
+    cursor: pointer;
+
+    @include transition(transform, 1s, 0.6s);
+
+    @include mq($from: s) {
+      height: px-to-rem(92px);
+      width: px-to-rem(92px);
+      background: $color--brand--primary;
+
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 px-to-rem(60px) px-to-rem(92px) 0;
+        border-color: transparent $color--brand--primary transparent transparent;
+        position: absolute;
+        left: px-to-rem(-60px);
+        top: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__icon {
+    height: px-to-rem(56px);
+
+    @include mq($from: s) {
+      height: px-to-rem(92px);
+    }
+
+    svg {
+      color: $color--brand--primary;
+      position: relative;
+
+      @include mq($from: s) {
+        color: $color--white;
+      }
+
+      &:first-child {
+        animation: header-cta-anim-mobile 9s 3s infinite;
+
+        @include mq($from: s) {
+          animation: header-cta-anim 9s 3s infinite;
+        }
+      }
+    }
+
+    &__wrapper {
+      position: relative;
+      overflow: hidden;
+      height: px-to-rem(24px);
+
+      @include mq($from: s) {
+        height: px-to-rem(32px);
+      }
+    }
   }
 }
 
 .has-dom-ready .c-header {
   &__title,
-  &__cta {
+  &__cta__text {
     opacity: 1;
   }
 
@@ -46,7 +120,59 @@
     @include transition(opacity, 1s, 0.6s);
   }
 
-  &__cta {
+  &__cta__text {
     @include transition(opacity, 1s, 0.7s);
+  }
+
+  &__cta {
+    transform: translateX(0);
+  }
+}
+
+@keyframes header-cta-anim-mobile {
+  0% {
+    margin-top: 0;
+  }
+  16% {
+    top: px-to-rem(-56px);
+  }
+  33% {
+    top: px-to-rem(-56px);
+  }
+  50% {
+    top: px-to-rem(-112px);
+  }
+  66% {
+    top: px-to-rem(-112px);
+  }
+  82% {
+    top: px-to-rem(-168px);
+  }
+  100% {
+    top: px-to-rem(-168px);
+  }
+}
+
+@keyframes header-cta-anim {
+  0% {
+    margin-top: 0;
+  }
+  16% {
+    top: px-to-rem(-92px);
+  }
+  33% {
+    top: px-to-rem(-92px);
+  }
+  50% {
+    top: px-to-rem(-184px);
+  }
+  66% {
+    top: px-to-rem(-184px);
+  }
+  82% {
+    top: px-to-rem(-276px);
+  }
+  100% {
+    top: px-to-rem(-276px);
   }
 }

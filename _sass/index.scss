@@ -9,14 +9,16 @@
 @import "tokens/susy";
 @import "tokens/transition";
 
-// utilities
-@import "utilities/spacing";
-
 // tools
 @import "tools/font";
 @import "tools/px-to-rem";
 @import "tools/spacing";
 @import "tools/transition";
+
+// utilities
+@import "utilities/spacing";
+@import "utilities/sprite-holder";
+@import "utilities/svg-icon";
 
 // elements
 @import "elements/body";
