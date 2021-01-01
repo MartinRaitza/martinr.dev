@@ -4,4 +4,6 @@ source "https://rubygems.org"
 group :jekyll_plugins do
   # sitemap
   gem "jekyll-sitemap", "~> 1.4.0"
+  # autoprefixer
+  gem 'jekyll-autoprefixer'
 end
