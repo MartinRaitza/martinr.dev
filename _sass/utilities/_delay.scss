@@ -1,0 +1,11 @@
+@for $i from 1 through 10 {
+  @if ($i == 10) {
+    .u-delay--#{$i} {
+      transition-delay: 1s;
+    }
+  } @else {
+    .u-delay--#{$i} {
+      transition-delay: 0.1s * $i;
+    }
+  }
+}
