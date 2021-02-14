@@ -12,6 +12,7 @@ h1,
   line-height: px-to-rem(44px);
   @include margin-bottom(l);
   text-transform: uppercase;
+  letter-spacing: px-to-rem(4px);
 }
 
 h2,
@@ -65,7 +66,8 @@ h4,
   h1,
   .e-h1 {
     font-size: px-to-rem(48px);
-    line-height: px-to-rem(42px);
+    line-height: px-to-rem(52px);
+    letter-spacing: px-to-rem(6px);
   }
 
   h2,
