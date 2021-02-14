@@ -9,7 +9,7 @@ $font-weight: (
 
 $defaultFonts: (
   "headline": (
-    "family": "Nurom-Regular",
+    "family": "Raleway-Medium",
   ),
   "subline": (
     "family": "Barlow-Medium",
@@ -20,12 +20,12 @@ $defaultFonts: (
 );
 
 $fonts: (
-  "Nurom": (
-    "regular": (
-      "family": "Nurom-Regular",
+  "Raleway-Medium": (
+    "bold": (
+      "family": "Raleway-Medium",
       "style": "normal",
-      "localSrc": "Nurom-Regular",
-      "fileName": "Nurom-Regular",
+      "localSrc": "Raleway-Medium",
+      "fileName": "Raleway-Medium",
     ),
   ),
   "Barlow": (

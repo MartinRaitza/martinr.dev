@@ -1,0 +1,14 @@
+.c-circle {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem !important;
+
+    transform-origin: center left;
+    width: 100px !important;
+    height: 100px;
+    background: $color--brand--primary;
+    border-radius: 50%;
+  }
+}

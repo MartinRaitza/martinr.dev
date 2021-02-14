@@ -3,45 +3,49 @@ h2,
 h3,
 h4 {
   @include font-family("headline");
-  text-transform: uppercase;
+  letter-spacing: px-to-rem(2px);
 }
 
 h1,
 .e-h1 {
-  font-size: px-to-rem(56px);
-  line-height: px-to-rem(60px);
+  font-size: px-to-rem(40px);
+  line-height: px-to-rem(44px);
+  @include margin-bottom(l);
+  text-transform: uppercase;
 }
 
 h2,
 .e-h2 {
-  font-size: px-to-rem(36px);
-  line-height: px-to-rem(40px);
+  font-size: px-to-rem(32px);
+  line-height: px-to-rem(36px);
+  @include margin-bottom(l);
 }
 
 h3,
 .e-h3 {
   font-size: px-to-rem(24px);
   line-height: px-to-rem(28px);
+  @include margin-bottom(m);
 }
 
 h4,
 .e-h4 {
-  font-size: px-to-rem(20px);
-  line-height: px-to-rem(24px);
-  @include font-family("subline");
+  font-size: px-to-rem(16px);
+  line-height: px-to-rem(20px);
+  @include margin-bottom(s);
 }
 
 @include mq($from: s) {
   h1,
   .e-h1 {
-    font-size: px-to-rem(62px);
-    line-height: px-to-rem(66px);
+    font-size: px-to-rem(44px);
+    line-height: px-to-rem(48px);
   }
 
   h2,
   .e-h2 {
-    font-size: px-to-rem(40px);
-    line-height: px-to-rem(44px);
+    font-size: px-to-rem(36px);
+    line-height: px-to-rem(40px);
   }
 
   h3,
@@ -52,35 +56,27 @@ h4,
 
   h4,
   .e-h4 {
-    font-size: px-to-rem(22px);
-    line-height: px-to-rem(26px);
-    @include font-family("subline");
+    font-size: px-to-rem(18px);
+    line-height: px-to-rem(22px);
   }
 }
 
-@include mq($from: s) {
+@include mq($from: m) {
   h1,
   .e-h1 {
-    font-size: px-to-rem(66px);
-    line-height: px-to-rem(70px);
+    font-size: px-to-rem(48px);
+    line-height: px-to-rem(42px);
   }
 
   h2,
   .e-h2 {
-    font-size: px-to-rem(44px);
-    line-height: px-to-rem(48px);
+    font-size: px-to-rem(40px);
+    line-height: px-to-rem(44px);
   }
 
   h3,
   .e-h3 {
     font-size: px-to-rem(28px);
     line-height: px-to-rem(32px);
-  }
-
-  h4,
-  .e-h4 {
-    font-size: px-to-rem(24px);
-    line-height: px-to-rem(28px);
-    @include font-family("subline");
   }
 }
