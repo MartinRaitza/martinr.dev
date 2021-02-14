@@ -12,11 +12,11 @@ setTimeout(function () {
 
 var isInViewport = function (elem) {
   var bounding = elem.getBoundingClientRect();
+
   return (
-    bounding.top >= 0 &&
+    bounding.top <=
+      (window.innerHeight || document.documentElement.clientHeight) - 100 &&
     bounding.left >= 0 &&
-    bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
     bounding.right <=
       (window.innerWidth || document.documentElement.clientWidth)
   );
@@ -30,10 +30,6 @@ window.addEventListener(
     for (i = 0; i < elements.length; i++) {
       if (isInViewport(elements[i])) {
         elements[i].classList.add("is-inview");
-      } else {
-        if (elements[i].classList.contains("is-inview")) {
-          elements[i].classList.remove("is-inview");
-        }
       }
     }
   },
